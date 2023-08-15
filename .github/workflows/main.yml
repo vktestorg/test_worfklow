@@ -49,6 +49,7 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     needs: workflow_approval
+    steps:
        - name: Deploy
          run: echo Hello, ${{ inputs.username }}
   
