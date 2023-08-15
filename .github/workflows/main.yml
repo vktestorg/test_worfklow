@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: workflow_authorization
     steps:
-      - name: build
+      - name: echo
         run: echo Hello, ${{ inputs.username }}
       - name: Test Secrets
         run: |
@@ -39,9 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Waiting For Approval
-      - uses: trstringer/manual-approval@v1
-        with:
+       - name: waiting for approval
+       - uses: trstringer/manual-approval@v1
+         with:
            secret: ${{ github.token }}
            approvers: vikramk20 
+        
   
