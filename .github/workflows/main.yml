@@ -15,7 +15,7 @@ jobs:
        - name: check user permission
          uses: 74th/workflow-permission-action@1.0.0
          with:
-           listfile: .github/workflows/deploy-user
+           users: vikramk20
            
   build:
     name: build
